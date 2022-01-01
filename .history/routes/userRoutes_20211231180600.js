@@ -1,0 +1,11 @@
+import express from "express";
+import { addStudent, fetchStudent, updateStudent, deleteStudent } from "../controllers/userController.js";
+
+const router = express.Router()
+
+router.post("/add", addStudent)
+router.get("/get", fetchStudent)
+router.patch("/update", updateStudent)
+router.delete("/delete/:id", deleteStudent)
+
+export default router
