@@ -21,7 +21,6 @@ app.use((req, res, next) => {
 app.use(bodyParser.json({ extended: true }))
 
 app.use('/uploads/images', express.static(path.join('uploads', 'images')))
-
 app.use("/user", userRouter)
 
 const url = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASSWORD}@cluster0.l7gmh.mongodb.net/${process.env.DB_NAME}?retryWrites=true&w=majority`
